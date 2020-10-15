@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dateオブジェクト演習2_DEMO曜日</title>
+
+<script>
+    //日時表示文字列の作成
+    var str = "ただいまの時刻：";
+    //日時取得
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;  //月は必ず +１をする！
+    var date = now.getDate();
+    var day = now.getDay();  //曜日[0=日曜日,1=月曜日...]
+    var h = now.getHours();
+    var m = now.getMinutes();
+    var s = now.getSeconds();
+    var ap = "AM";
+if (h >= 12) {
+　　h -= 12;
+　　ap = "PM";
+}
+if (m < 10)
+　　m = "0" + m;
+document.write(h, ":", m, ap);
+if (4 <= h && h < 11) {  // am4:00-11:00
+    alert("おはようございます🌤");
+  }
+  else if (11 <= h && h < 17) {  // am11:00-pm5:00
+    alert("こんにちは🍙");
+  }
+  else { // pm5:00-am4:00
+  alert("こんばんは🌝");
+  }
+
+
+    //曜日を表示する方法（配列）：
+    var youbi = ["日", "月", "火", "水", "木", "金", "土"];
+    alert( str + year+"年"+ month+"月"+date+"日 "+ youbi[day] + "曜日 " +ap+h+"時"+m+"分"+s+"秒" );
+
+
+  /*
+  //曜日を表示する、もう一つの方法（IF分岐）：
+    if(day == 0){
+      d = "日";
+    }else if(day == 1){
+      d = "月";
+    }else if(day == 2){
+      d = "火";
+    }else if(day == 3){
+      d = "水";
+    }else if(day == 4){
+      d = "木";
+    }else if(day == 5){
+      d = "金";
+    }else if(day == 6){
+      d = "土";
+    }
+    alert( str + year+"年"+ month+"月"+date+"日 "+ "(" + d + ") " +h+"時"+m+"分"+s+"秒" );
+  */
+
+
+</script>
+</head>
+<body>
+<h1>課題</h1>
+</body>
+</html>

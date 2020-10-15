@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>演習＆課題：Dateオブジェクト</title>
+<style>#main{margin:5px;padding: 5px; background: #666;color:#fff;}</style>
+
+<script>
+window.onload = function () {
+    //曜日配列
+    var youbi = ["日", "月", "火", "水", "木", "金", "土"];
+    //日時取得
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;  //+１を入れる。
+    var date = now.getDate();
+    var day = now.getDay();
+    var h = now.getHours();
+    var m = now.getMinutes();
+    var s = now.getSeconds();
+    //日時表示文字列の作成
+    var str = year + "-" + month + "-" + date + "(" + youbi[day] + ") " + h + ":" + m + ":" + s;
+    //div要素id属性mainを指定
+    var main = document.getElementById('main');
+    main.innerHTML = str;
+}
+</script>
+
+</head>
+<body>
+<h1>Dateオブジェクト</h1>
+<div id="parent_div">
+    <div id="main">
+        <!-- ここに日時を表示させる -->
+    </div>
+</div>
+</body>
+</html>
