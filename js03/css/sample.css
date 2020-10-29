@@ -1,0 +1,50 @@
+body{
+    margin:1;
+    padding:1;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    padding: 1em 1em;
+    background-color: rgba(211, 151, 206, 0.5);
+    text-shadow: 1px 2px 5px rgb(54, 47, 54);
+    color: white;
+    text-align: center;
+}
+main{
+    color: rgb(114, 81, 108);
+    text-shadow: 1px 1px 3px pink;
+}
+footer{
+    padding:0.5em 0.5em;
+    background-color: rgba(211, 151, 206, 0.5);
+    text-shadow: 1px 2px 5px rgb(54, 47, 54);
+    color: white;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    height:100px;
+}
+ul{
+    padding: 0;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    padding: 0.5em 0.5em;
+    text-align: center;
+    list-style-type:none;
+    color: #fff;
+    border: 5px solid rgb(187, 136, 183);
+    background-color: rgb(154, 186, 235);
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+
+    background: rgba(211, 151, 206, 0.5);
+    color: rgb(114, 81, 108);
+}
