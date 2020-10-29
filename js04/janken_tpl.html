@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample02.css">
+<title>じゃんけん</title>
+</head>
+<body>
+<header>
+  <h1>🔥本田とじゃんけん🔥</h1>
+</header>
+
+<main>
+  <ul>
+    <li id="gu_btn">Japan✊🏻</li>
+    <li id="cho_btn">Coke✌🏻</li>
+    <li id="par_btn">pepsi🖐🏻</li>
+  </ul>
+  <div>本田の出した手は, , ,<br>
+  <span id="pc_hands">❗️❓</span></div>
+  <div id="judgment">君は何回目で勝てるかな</div>
+</main>
+
+<footer></footer>
+
+<script>
+
+// グーの場合
+$("#gu_btn").on("click", function(){
+    //乱数を創る1~3
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        // ("グー")
+        $("#pc_hands").html('<img src= "201023f.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023g.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(600);
+    }
+    if(num == 2){
+        // ("チョキ")
+        $("#pc_hands").html('<img src= "201023e.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023h.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(200);
+    }
+    if(num == 3){
+        // ("パー")
+        $("#pc_hands").html('<img src= "201023d.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023g.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(600);
+    }
+})
+
+// チョキの場合
+$("#cho_btn").on("click", function(){
+    //乱数を創る1~3
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        // ("グー")
+        $("#pc_hands").html('<img src= "201023f.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023g.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(600);
+    }
+    if(num == 2){
+        // ("チョキ")
+        $("#pc_hands").html('<img src= "201023e.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023g.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(600);
+    }
+    if(num == 3){
+        // ("パー")
+        $("#pc_hands").html('<img src= "201023d.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023h.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(200);
+    }
+})
+
+// パーの場合
+$("#par_btn").on("click", function(){
+    //乱数を創る1~3
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        // ("グー")
+        $("#pc_hands").html('<img src= "201023f.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023h.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(200);
+    }
+    if(num == 2){
+        // ("チョキ")
+        $("#pc_hands").html('<img src= "201023e.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023g.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(600);
+    }
+    if(num == 3){
+        // ("パー")
+        $("#pc_hands").html('<img src= "201023d.jpg" width="420" height="240">');
+        $("#judgment").html('<img src= "201023g.jpg" width="420" height="240">');
+        $("#judgment").hide(200).show(600);
+    }
+})
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    margin:1;
+    padding:0.5em;
+    text-align:left;
+    font-size: 15px;
+    background-color: black;
+}
+header{
+    background-image:url(201023a.jpg);
+    background-size: auto;
+    background-repeat: repeat;
+    overflow: hidden;
+    padding: 3em 3em;
+    color: white;
+    text-shadow:0 1px #bbb,
+                0 3px #333,
+                0 5px #999,
+                0 7px #222,
+                0 9px #777,
+                0 11px #111,
+                0 13px #555,
+                0 15px #000,
+                0 17px #333,
+                0 17px 8px #000;
+    text-align: center;
+}
+main{
+    font-size: 20px;
+    background-color: black;
+    color:  white;
+}
+footer{
+    background-color: black;
+    padding:0.5em 0.5em;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    height:100px;
+}
+ul{
+    padding: 0;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    font-size: 25px;
+    width:100%;
+}
+li{
+    padding: 0.5em 0.5em;
+    text-align: center;
+    list-style-type:none;
+    color: #fff;
+    border: 2px ridge white;
+    background-color: black;
+    display: table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+
+    background-color: black;
+}
