@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>クイズ</title>
+</head>
+<body>
+
+<header>
+    <h1>クイズ 全6問 第１問</h1>
+    <h2>スタート！</h2>
+</header>
+
+<main>
+  <p id="quest">ここに問題が出題されます</p>
+  <p>
+    <input type="radio" name="toi" value="1"><span id="toi1">選択肢１</span>
+    <input type="radio" name="toi" value="2"><span id="toi2">選択肢２</span>
+    <input type="radio" name="toi" value="3"><span id="toi3">選択肢３</span>
+    <p id="echo"></p>
+  </p>
+</main>
+
+<footer>フッター</footer>
+<script>
+//ここから記述領域［START］
+
+  //以下に配列を記述してください。
+  //問題文[配列]
+  const qs = [
+    "おすしの大トロと中トロのちがいってなーんだ？",
+    "いちばん電気が強いのはどれでしょう？",
+    "フグがふくらんでいるときのきもちにぴったりなのはどれ？",
+    "さかななのに飛べるさかなはどれ？",
+    "うまれてからおとなになるまで、なまえがかわるさかなはどれ？",
+    "さかなのせなかにある、ひらひらとしたもののなまえはなに？"
+  ];
+    
+  //回答選択肢[多重配列]
+  const toi = [
+    ["まぐろの種類","あぶらの量","性別"],
+    ["電気うなぎ","電気なまず","電気くらげ"],
+    ["危機察知","求愛","満腹"],
+    ["ニジマス","トビウオ","デメキン"],
+    ["ブリ","マンボウ","シーラカンス"],
+    ["はね","せびれ","よろい"]
+  ];
+    
+  //答え[配列]
+  const ans = [2, 1, 1, 2, 1, 2];
+  let score = 0;
+
+  //最初の問題文＆回答選択肢＆回答値を設定
+  let i = 0;
+  $("#quest").text( qs[i] );
+  $("#toi1").text( toi[i][0] );
+  $("#toi2").text( toi[i][1] );
+  $("#toi3").text( toi[i][2] );
+
+  //ラジオボタンをクリックしたらイベント発生！(クリックイベント)
+  $("[name=toi]").on("click",function(){
+    if(i<=5){
+      const v =$(this).val();
+      if(ans[i]==v){
+        $("h2").text("正解😄！");
+        score++;
+      }else{
+        $("h2").text("不正解😣！");
+      }
+    i++; //配列に入れるiが１プラスされます
+    $("#quest").text( qs[i] );
+    $("#toi1").text( toi[i][0] );
+    $("#toi2").text( toi[i][1] );
+    $("#toi3").text( toi[i][2] );
+    $("h1").html("第"+(i+1)+"問");
+    }else{
+      $("h1").html("終了！");
+      $("h2").html(+(score)+"問正解！");
+    }
+  });
+
+//ここまでが記述領域［END］
+</script>
+</body>
+</html>
