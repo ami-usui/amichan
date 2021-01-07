@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/sample.css">
+<title>GoogleBookAPI【練習】</title>
+</head>
+<body>
+
+<header>
+  <h1>GoogleBooks検索</h1>
+  <p>
+    <input type="text" id="keyword" value="jQuery">
+    <button id="readbook">データ読み込み</button>
+  </p>
+</header>
+
+<main>
+  <p id="content"></p>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  const url = "https://www.googleapis.com/books/v1/volumes?q=";
+  $.getJSON(url + keyword, function(data){
+    let view = ""; //HTML
+    for(let i=0; i<data.items.length; i++){
+       const item = data.items[i];
+        view += '<ul>' ;
+        view += '<li>題名：' + item.volumeInfo.title + '</li>';
+        view += '<li>出版社：' + item.volumeInfo.publisher + '</li>';
+        view += '<li><a href="item.volumeInfo.previewLink">詳細</a href>' + '</li>';
+        view += '</ul>' ;
+    }
+     // HTMLへ埋め込む
+    $("#content").html(view);
+  });
+    
+</script>
+</body>
+</html>
