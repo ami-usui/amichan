@@ -1,0 +1,32 @@
+body{
+    margin-top: 0em;
+    padding:0;
+    padding: 2em 3em;
+    font-size: 15px;
+    color: #9ccaf0;
+    width:100%;
+    background-color:#c1d7e9;
+    width: 100%;
+    border:10px solid #ffffff;
+    box-sizing:border-box;
+}
+h1 {
+    text-align: center;
+    padding: 0.7em 0.7em ;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: #699dc7;
+    font-size: 40px;
+    background-image:url(201211.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+nav {
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    background-color: rgb(184, 186, 194);
+    cursor: pointer;
+}
+canvas {
+    background-color: #ececec;
+}
